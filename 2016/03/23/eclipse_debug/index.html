@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>AMSFE&#39;s blog</title>
+    <title>Eclipse的debug技术 | AMSFE&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="amsfe">
     
-    <meta name="description" content="学习总结 思考感悟 知识管理">
+    <meta name="description" itemprop="description" content="Eclipse的一些调试技巧。">
     
-    
+    <meta name="keywords" content="Eclipse,debug">
     
     
     <link rel="alternate" href="atom.xml" title="AMSFE&#39;s blog" type="application/atom+xml">
@@ -62,53 +62,91 @@
 
     </header>
     <div id="container">
-      <div id="main">
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2016/04/09/android_study_road_1/" title="Android学习之路(一) —— 环境搭建" itemprop="url">
-  
-    <h1 itemprop="name">Android学习之路(一) —— 环境搭建</h1>
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
     
-     
-      <p itemprop="description" >工欲善其事，必先利其器，对于Andorid开发者来说Android Studio无疑是最合适的选择。</p>
-      
+      <a href="/2016/03/23/eclipse_debug/" title="Eclipse的debug技术" itemprop="url">Eclipse的debug技术</a>
+  </h1>
+  <p class="article-author">By
     
-    <time datetime="2016-04-09T02:59:06.000Z" itemprop="datePublished">2016-04-09</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2016/03/23/eclipse_debug/" title="Eclipse的debug技术" itemprop="url">
-  
-    <h1 itemprop="name">Eclipse的debug技术</h1>
-    
-     
-      <p itemprop="description" >Eclipse的一些调试技巧。</p>
-      
-    
+      <a href="http://amsfe.com" title="amsfe">amsfe</a>
+    </p>
+  <p class="article-time">
     <time datetime="2016-03-23T12:25:31.000Z" itemprop="datePublished">2016-03-23</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2016/03/20/eclipse_problem_summary/" title="Eclipse的使用问题总结" itemprop="url">
-  
-    <h1 itemprop="name">Eclipse的使用问题总结</h1>
+    Updated:<time datetime="2016-04-15T16:39:19.871Z" itemprop="dateModified">2016-04-16</time>
     
-     
-      <p itemprop="description" >用Eclipse开发经常遇到的一些问题的解决方法。</p>
-      
-    
-    <time datetime="2016-03-20T15:42:12.000Z" itemprop="datePublished">2016-03-20</time>
-  </a>
-</section>
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+		</div>
+		
+		<ul>
+<li>断点：遇到断点，暂挂，等候命令</li>
+<li>debug as -&gt; Java Application</li>
+<li>快捷键：<br>F5:单步跳入。进入本行代码中执行<br>F6:单步跳过。执行本行代码，跳到下一行<br>F7:单步返回。跳出方法<br>F8:继续。执行到下一个断点，如果没有断点了，就执行到结束<br>ctrl+R:执行到光标所在的一行</li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Eclipse/">Eclipse</a><a href="/tags/Study-Notes/">Study Notes</a><a href="/tags/debug/">debug</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Eclipse/">Eclipse</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://amsfe.com/2016/03/23/eclipse_debug/" data-title="Eclipse的debug技术 | AMSFE&#39;s blog" data-tsina="null" class="share clearfix">
+  </div>
 
 </div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/04/09/android_study_road_1/" title="Android学习之路(一) —— 环境搭建">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  Android学习之路(一) —— 环境搭建</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/03/20/eclipse_problem_summary/"  title="Eclipse的使用问题总结">
+ <strong>NEXT:</strong><br/> 
+ <span>Eclipse的使用问题总结
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
@@ -217,6 +255,8 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
@@ -236,6 +276,66 @@ $(document).ready(function(){
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
@@ -243,4 +343,4 @@ $(document).ready(function(){
 
 
   </body>
- </html>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amsfe.com/"/>
-  <updated>2016-04-15T14:05:36.438Z</updated>
+  <updated>2016-04-16T14:57:07.210Z</updated>
   <id>http://amsfe.com/</id>
   
   <author>
@@ -16,29 +16,98 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello AMSFE</title>
-    <link href="http://amsfe.com/2016/04/15/hello-world/"/>
-    <id>http://amsfe.com/2016/04/15/hello-world/</id>
-    <published>2016-04-15T12:40:06.851Z</published>
-    <updated>2016-04-15T14:05:36.438Z</updated>
+    <title>Android学习之路(一) —— 环境搭建</title>
+    <link href="http://amsfe.com/2016/04/09/android_study_road_1/"/>
+    <id>http://amsfe.com/2016/04/09/android_study_road_1/</id>
+    <published>2016-04-09T02:59:06.000Z</published>
+    <updated>2016-04-16T14:57:07.210Z</updated>
     
-    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;如果你跟笔者一样是个移动开发新人，建议选择Android Studio，Eclipse虽说现在用户群还很大，但未来趋势是Android Studio的天下，对于一个初学者来说，直接使用Android Studio学习Android就可以，但如果你是一个公司新人，那就要根据公司情况了，有些老员工熟悉Eclipse那套技术栈，那你就别给自己找麻烦了，乖乖地用Eclipse吧。万变不离其宗，无论是Android Studio还是Eclipse都只是方便我们开发的工具，而我们真正应该掌握的还是Android核心知识。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你手中恰巧没有安卓机而又嫌Android studio自带的虚拟机打开太慢，可以使用第三方安卓虚拟机，笔者推荐使用Genymotion&lt;/li&gt;
+&lt;li&gt;Android studio 下载链接: &lt;a href=&quot;http://www.android-studio.org/index.php/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.android-studio.org/index.php/download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Genymotion 下载链接: &lt;a href=&quot;https://www.genymotion.com/plugins/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.genymotion.com/plugins/&lt;/a&gt;  (需要先注册才能下载，推荐下载with VM)&lt;/li&gt;
+&lt;li&gt;关于Genymotion与Android studio的关联问题请参照Genymotion官网提示和百度教程。&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      工欲善其事，必先利其器，对于Andorid开发者来说Android Studio无疑是最合适的选择。
     
     </summary>
     
+      <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
+    
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Eclipse的debug技术</title>
+    <link href="http://amsfe.com/2016/03/23/eclipse_debug/"/>
+    <id>http://amsfe.com/2016/03/23/eclipse_debug/</id>
+    <published>2016-03-23T12:25:31.000Z</published>
+    <updated>2016-04-15T16:39:19.871Z</updated>
+    
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;断点：遇到断点，暂挂，等候命令&lt;/li&gt;
+&lt;li&gt;debug as -&amp;gt; Java Application&lt;/li&gt;
+&lt;li&gt;快捷键：&lt;br&gt;F5:单步跳入。进入本行代码中执行&lt;br&gt;F6:单步跳过。执行本行代码，跳到下一行&lt;br&gt;F7:单步返回。跳出方法&lt;br&gt;F8:继续。执行到下一个断点，如果没有断点了，就执行到结束&lt;br&gt;ctrl+R:执行到光标所在的一行&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      Eclipse的一些调试技巧。
+    
+    </summary>
+    
+      <category term="Eclipse" scheme="http://amsfe.com/categories/Eclipse/"/>
+    
+    
+      <category term="Eclipse" scheme="http://amsfe.com/tags/Eclipse/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="debug" scheme="http://amsfe.com/tags/debug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Eclipse的使用问题总结</title>
+    <link href="http://amsfe.com/2016/03/20/eclipse_problem_summary/"/>
+    <id>http://amsfe.com/2016/03/20/eclipse_problem_summary/</id>
+    <published>2016-03-20T15:42:12.000Z</published>
+    <updated>2016-04-16T15:27:02.158Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;1. eclipse提示Note: This element neither has attached source nor attached Javadoc and hence no Javadoc could be found.解决方案：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(1).Android x.x.x（所用版本）documentation for Androidsdk（API开发文档）未安装：&lt;br&gt;adt-bundle-windows-x86_64-20140321\sdk\目录下缺少了个docs文档。于是每次鼠标停放在函数名上时，总提示：Note: This element neither has attached source nor attached Javadoc and hence no Javadoc could be found.可通过镜像网站下载安装包（关于如何通过镜像网站下载安装包，教程请参考↓↓↓）。&lt;/p&gt;
+&lt;p&gt;(2).API开发文档已安装：&lt;br&gt;解决方案请参考：&lt;a href=&quot;http://blog.csdn.net/listening_music/article/details/6868076&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/listening_music/article/details/6868076&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Android SDK Manager 更新代理配置：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因为GFW的原因，国内使用SDK Manager下载会出现问题，可以使用镜像网站解决&lt;br&gt;镜像网站：&lt;a href=&quot;http://mirrors.neusoft.edu.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.neusoft.edu.cn/&lt;/a&gt;&lt;br&gt;配置步骤：&lt;br&gt;(1).启动 Android SDK Manager ，打开主界面，依次选择「Tools」、「Options…」，弹出『Android SDK Manager - Settings』窗口；&lt;br&gt;(2).在『Android SDK Manager - Settings』窗口中，在「HTTP Proxy Server」和「HTTP Proxy Port」输入框内填入mirrors.neusoft.edu.cn和80，并且选中「Force https://… sources to be fetched using…」复选框。设置完成后单击「Close」按钮关闭『Android SDK Manager - Settings』窗口返回到主界面；&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager_Proxy_Setting.png&quot; alt=&quot;Android_SDK_Manager_Proxy_Setting.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;3.依次选择「Packages」、「Reload」。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager.png&quot; alt=&quot;Android_SDK_Manager.png&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      用Eclipse开发经常遇到的一些问题的解决方法。
+    
+    </summary>
+    
+      <category term="Eclipse" scheme="http://amsfe.com/categories/Eclipse/"/>
+    
+    
+      <category term="Eclipse" scheme="http://amsfe.com/tags/Eclipse/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Summary" scheme="http://amsfe.com/tags/Summary/"/>
     
   </entry>
   
