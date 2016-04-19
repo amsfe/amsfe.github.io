@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Eclipse的使用问题总结 | AMSFE&#39;s blog</title>
+    <title>Android屏幕参数 | AMSFE&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="amsfe">
     
-    <meta name="description" itemprop="description" content="用Eclipse开发经常遇到的一些问题的解决方法。">
+    <meta name="description" itemprop="description" content="Android屏幕参数简介。">
     
-    <meta name="keywords" content="Eclipse,使用问题">
+    <meta name="keywords" content="Android,屏幕参数">
     
     
     <link rel="alternate" href="atom.xml" title="AMSFE&#39;s blog" type="application/atom+xml">
@@ -67,15 +67,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/03/20/eclipse_problem_summary/" title="Eclipse的使用问题总结" itemprop="url">Eclipse的使用问题总结</a>
+      <a href="/2016/04/15/android_screen/" title="Android屏幕参数" itemprop="url">Android屏幕参数</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://amsfe.com" title="amsfe">amsfe</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-03-20T15:42:12.000Z" itemprop="datePublished">2016-03-20</time>
-    Updated:<time datetime="2016-04-16T15:27:02.158Z" itemprop="dateModified">2016-04-16</time>
+    <time datetime="2016-04-15T15:27:13.000Z" itemprop="datePublished">2016-04-15</time>
+    Updated:<time datetime="2016-04-19T15:31:42.071Z" itemprop="dateModified">2016-04-19</time>
     
   </p>
 </header>
@@ -87,34 +87,52 @@
 		
 		</div>
 		
-		<p><strong>1. eclipse提示Note: This element neither has attached source nor attached Javadoc and hence no Javadoc could be found.解决方案：</strong></p>
-<p>(1).Android x.x.x（所用版本）documentation for Androidsdk（API开发文档）未安装：<br>adt-bundle-windows-x86_64-20140321\sdk\目录下缺少了个docs文档。于是每次鼠标停放在函数名上时，总提示：Note: This element neither has attached source nor attached Javadoc and hence no Javadoc could be found.可通过镜像网站下载安装包（关于如何通过镜像网站下载安装包，教程请参考↓↓↓）。</p>
-<p>(2).API开发文档已安装：<br>解决方案请参考：<a href="http://blog.csdn.net/listening_music/article/details/6868076" target="_blank" rel="external">http://blog.csdn.net/listening_music/article/details/6868076</a> </p>
-<p><strong>2. Android SDK Manager 更新代理配置：</strong></p>
-<p>因为GFW的原因，国内使用SDK Manager下载会出现问题，可以使用镜像网站解决<br>镜像网站：<a href="http://mirrors.neusoft.edu.cn/" target="_blank" rel="external">http://mirrors.neusoft.edu.cn/</a><br>配置步骤：<br>(1).启动 Android SDK Manager ，打开主界面，依次选择「Tools」、「Options…」，弹出『Android SDK Manager - Settings』窗口；<br>(2).在『Android SDK Manager - Settings』窗口中，在「HTTP Proxy Server」和「HTTP Proxy Port」输入框内填入mirrors.neusoft.edu.cn和80，并且选中「Force https://… sources to be fetched using…」复选框。设置完成后单击「Close」按钮关闭『Android SDK Manager - Settings』窗口返回到主界面；</p>
-<p><img src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager_Proxy_Setting.png" alt="Android_SDK_Manager_Proxy_Setting.png"></p>
-<p>3.依次选择「Packages」、「Reload」。</p>
-<p><img src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager.png" alt="Android_SDK_Manager.png"></p>
+		<blockquote>
+<ul>
+<li><p>QVGA 即”Quarter VGA”。顾名思义即VGA的四分之一尺寸，亦即在液晶屏幕（LCD）上输出的分辨率是240×320像素。QVGA支持屏幕旋转，可以开发出相应的程序，以显示旋转90°、180°、270°屏幕位置。由HandEra公司发布。多用于手持/移动设备。</p>
+</li>
+<li><p>需要说明的是有些媒体把QVGA屏幕当成与TFT和TFD等LCD材质相同的东西是错误的，QVGA屏幕的说法多见与日本的一些手机中，目前采用微软Pocket PC操作系统的智能手机屏幕也大多是320×240像素的QVGA屏幕。 </p>
+</li>
+<li><p>所谓QVGA液晶技术，就是在液晶屏幕上输出的分辨率是240×320的液晶输出方式。这个分辨率其实和屏幕本身的大小并没有关系。比如说，如果2.1英寸液晶显示屏幕可以显示240×320分辨率的图像，就叫做“QVGA 2.1英寸液晶显示屏”；如果3.8英寸液晶显示屏幕可以显示240×320的图像，就叫做“QVGA 3.8英寸液晶显示屏”，以上两种情况虽然具有相同的分辨率，但是由于尺寸的不同实际的视觉效果也不同，一般</p>
+</li>
+<li><p>HVGA 即VGA(640<em>480)的一半,分辨率为(480</em>320),(3:2宽高比)<br>它是用于各种各样的PDA设备，首先是2002年的索尼Clie PEG - NR70，<br>来说屏幕小的一个画面自然也会细腻一些。</p>
+</li>
+<li><p>WVGA 数码产品屏幕材质的一种，VGA的另一种形式，比VGA分辨率高，别名 ： Wide VGA, ，其分辩率为800×480象素。是扩大了VGA（640×480)的分辨率。应用于PDA和手机等，因为很多网页的宽度都是800，所以WVGA的屏幕会更加适和于浏览网页，可以说是未来手持设备的分辨率的大趋势<br>术语和概念</p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>单位：像素 <ul>
+<li>WVGA854: 854*480</li>
+<li>WVGA800: 800*480</li>
+<li>HVGA: 640*480 </li>
+<li>QVGA: 320*240</li>
+<li>WQVGA432：432*240</li>
+<li>WQVGA400：400*240 </li>
+<li>Android3.0 WXGA：800*128</li>
+</ul>
+</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Study-Notes/">Study Notes</a><a href="/tags/Eclipse/">Eclipse</a><a href="/tags/Summary/">Summary</a>
+  <span></span> <a href="/tags/Android/">Android</a><a href="/tags/Study-Notes/">Study Notes</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Eclipse/">Eclipse</a>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://amsfe.com/2016/03/20/eclipse_problem_summary/" data-title="Eclipse的使用问题总结 | AMSFE&#39;s blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://amsfe.com/2016/04/15/android_screen/" data-title="Android屏幕参数 | AMSFE&#39;s blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -123,14 +141,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/03/23/eclipse_debug/" title="Eclipse的debug技术">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  Eclipse的debug技术</span>
+
+<div class="next">
+<a href="/2016/04/14/android_data_storage/"  title="Android数据存储">
+ <strong>NEXT:</strong><br/> 
+ <span>Android数据存储
+</span>
 </a>
 </div>
-
 
 </nav>
 

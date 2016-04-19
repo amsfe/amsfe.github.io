@@ -1,0 +1,392 @@
+
+ <!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Android数据存储 | AMSFE&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="amsfe">
+    
+    <meta name="description" itemprop="description" content="Android数据存储之文件存储。">
+    
+    <meta name="keywords" content="Android,数据存储">
+    
+    
+    <link rel="alternate" href="atom.xml" title="AMSFE&#39;s blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="AMSFE&#39;s blog" title="AMSFE&#39;s blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="AMSFE&#39;s blog">AMSFE&#39;s blog</a></h1>
+				<h2 class="blog-motto">Stay hungry,Stay foolish</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:amsfe.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/04/14/android_data_storage/" title="Android数据存储" itemprop="url">Android数据存储</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://amsfe.com" title="amsfe">amsfe</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-04-14T07:09:11.000Z" itemprop="datePublished">2016-04-14</time>
+    Updated:<time datetime="2016-04-19T15:23:49.907Z" itemprop="dateModified">2016-04-19</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、数据存储之文件存储"><span class="toc-number">1.</span> <span class="toc-text">一、数据存储之文件存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在Android中创建文件"><span class="toc-number">1.1.</span> <span class="toc-text">1.在Android中创建文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-File类方法的介绍"><span class="toc-number">1.2.</span> <span class="toc-text">2.File类方法的介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-文件操作案列"><span class="toc-number">1.3.</span> <span class="toc-text">3.文件操作案列</span></a></li></ol></li></ol>
+		</div>
+		
+		<h2 id="一、数据存储之文件存储"><a href="#一、数据存储之文件存储" class="headerlink" title="一、数据存储之文件存储"></a>一、数据存储之文件存储</h2><h3 id="1-在Android中创建文件"><a href="#1-在Android中创建文件" class="headerlink" title="1.在Android中创建文件"></a>1.在Android中创建文件</h3><ul>
+<li><p>Android中文件存储的操作：</p>
+<ul>
+<li>Activity的openFileOutput()方法可以用于把数据输出到文件中</li>
+<li>创建的文件保存在/data/data/<package name="">/files目录</package></li>
+<li>实现过程与在Java中保存数据到文件中是一样的</li>
+</ul>
+</li>
+<li><p>Android内置的目录</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">"/mnt/sdcard/test.txt"</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Android外置的目录</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">"/mnt/extsdcard/test.txt"</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建文件</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">"/mnt/sdcard/test.txt"</span>);</span><br><span class="line">		<span class="keyword">if</span>(!file.exists())</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				file.createNewFile();</span><br><span class="line">				System.out.println(<span class="string">"文件创建成功！"</span>);</span><br><span class="line">			&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">				<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">"文件已经存在"</span>, <span class="number">1000</span>).show();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//删除文件</span></span><br><span class="line"><span class="comment">//		file.delete();</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-File类方法的介绍"><a href="#2-File类方法的介绍" class="headerlink" title="2.File类方法的介绍"></a>2.File类方法的介绍</h3><ul>
+<li>得到当前应用程序的文件目录</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">this</span>.getFilesDir();<span class="comment">//这个目录是当前应用程序默认的数据存储目录</span></span><br><span class="line">		Log.i(<span class="string">"info"</span>, file.toString());</span><br></pre></td></tr></table></figure>
+<ul>
+<li>当前应用程序默认的缓存文件存放的位置</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">this</span>.getCacheDir();<span class="comment">//这个目录是当前应用程序默认的缓存文件存放的位置</span></span><br><span class="line">		<span class="comment">//把一些不是非常重要的文件在此处创建 使用</span></span><br><span class="line">		<span class="comment">//如果手机的内存不足的时候，系统会自动去删除APP的cache目录的数据</span></span><br><span class="line">		Log.i(<span class="string">"info"</span>, file.toString());</span><br></pre></td></tr></table></figure>
+<ul>
+<li>指定权限去创建一个文件夹</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//自定义一个目录</span></span><br><span class="line">		<span class="comment">// /data/data/&lt;包名&gt;/app_ywjt</span></span><br><span class="line">		File file = <span class="keyword">this</span>.getDir(<span class="string">"ywjt"</span>, MODE_PRIVATE);<span class="comment">//param1:自定义的文件夹名 ; param2:文件夹权限</span></span><br><span class="line">		Log.i(<span class="string">"info"</span>, file.toString());</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>文件权限简介</p>
+<ul>
+<li>MODE_PRIVATE —— 为默认操作模式，代表该文件是私有数据，只能被应用本身访问，在该模式下，写入的内容会覆盖原文件的内容。</li>
+<li>MODE_APPEND —— 该模式会检查文件是否存在，存在就往文件追加内容，否则就创建新文件。</li>
+<li>MODE_WORLD_READABLE和MODE_WORLD_WRITEBALE —— 用来控制其他应用是否有权限读写该文件</li>
+</ul>
+</li>
+<li><p>使用外置的存储目录</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.getExternalFilesDir(type);</span><br><span class="line">		<span class="comment">//可以得到外部的存储位置，该位置的数据跟内置的使用是一样的</span></span><br><span class="line">		<span class="comment">//如果APP卸载了，这里的数据也会自动清除掉</span></span><br><span class="line">		File file = <span class="keyword">this</span>.getExternalCacheDir();</span><br><span class="line">		Log.i(<span class="string">"info"</span>,file.toString());</span><br><span class="line">		<span class="comment">//如果开发者不遵守这样的规则，不把数据放入 data/data/&lt;包名&gt;</span></span><br><span class="line">		<span class="comment">//或者 /mnt/sdcard/Android/data/&lt;包名&gt;目录下</span></span><br><span class="line">	    <span class="comment">//卸载之后数据将不会自动清除掉 将会造成所谓的数据垃圾</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-文件操作案列"><a href="#3-文件操作案列" class="headerlink" title="3.文件操作案列"></a>3.文件操作案列</h3><ul>
+<li>当应用程序在安装时系统就会分配给他一个uerid，当该应用要去访问其他资源比如文件的时候，就需要userid匹配。默认情况下，任何应用创建的文件，shareprefences,数据库都应该是私有的(位于/data/data/<package name="">/files)，其他程序都无法访问。除非在创建时指定了MODE_WORLD_READABLE或者MODE_WORLD_WRITEABLE。</package></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> Button button;</span><br><span class="line">	<span class="keyword">private</span> EditText editText;</span><br><span class="line">	<span class="keyword">private</span> TextView textView;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">		setContentView(R.layout.activity_main);</span><br><span class="line">		</span><br><span class="line">		button = (Button) findViewById(R.id.btn_write);</span><br><span class="line">		editText = (EditText) findViewById(R.id.editText1);</span><br><span class="line">		textView = (TextView) findViewById(R.id.contentvalue);</span><br><span class="line">		</span><br><span class="line">		button.setOnClickListener(<span class="keyword">new</span> OnClickListener() &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View arg0)</span> </span>&#123;</span><br><span class="line">				<span class="comment">//写入文件</span></span><br><span class="line">				writeFiles(editText.getText().toString());</span><br><span class="line">				<span class="comment">//读入文件</span></span><br><span class="line">				textView.setText(readFiles());</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//保存文件内容</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writeFiles</span><span class="params">(String content)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//获得文件输出流，默认创建在data目录下  param1:可以指定一个全路径 写入到自定义的路径中 </span></span><br><span class="line">			FileOutputStream fos = openFileOutput(<span class="string">"a.txt"</span>, MODE_PRIVATE + MODE_APPEND);</span><br><span class="line">			<span class="comment">//写入文件</span></span><br><span class="line">			fos.write(content.getBytes());</span><br><span class="line">			<span class="comment">//关闭输出流</span></span><br><span class="line">			fos.close();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//读取文件内容</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">readFiles</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="comment">//定义一个字符串 作为要写出的数据</span></span><br><span class="line">		String content = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//写入到内存</span></span><br><span class="line">			FileInputStream fis = openFileInput(<span class="string">"a.txt"</span>);</span><br><span class="line">			<span class="comment">//从内存写出</span></span><br><span class="line">			ByteArrayOutputStream baos = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">			<span class="comment">//每次读出1024个字节</span></span><br><span class="line">			<span class="keyword">byte</span> [] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">			<span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">			<span class="comment">//循环读取数据</span></span><br><span class="line">			<span class="keyword">while</span>((len=fis.read(buffer))!=-<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				baos.write(buffer,<span class="number">0</span>,len);</span><br><span class="line">			&#125;</span><br><span class="line">			content = baos.toString();</span><br><span class="line">			fis.close();</span><br><span class="line">			baos.close();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> content;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2Ffile.png" alt="file.png"></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android/">Android</a><a href="/tags/Study-Notes/">Study Notes</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://amsfe.com/2016/04/14/android_data_storage/" data-title="Android数据存储 | AMSFE&#39;s blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/04/15/android_screen/" title="Android屏幕参数">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  Android屏幕参数</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/04/13/android_camera_recoder/"  title="Android Camera &amp; Recorder 学习之路">
+ <strong>NEXT:</strong><br/> 
+ <span>Android Camera &amp; Recorder 学习之路
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、数据存储之文件存储"><span class="toc-number">1.</span> <span class="toc-text">一、数据存储之文件存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在Android中创建文件"><span class="toc-number">1.1.</span> <span class="toc-text">1.在Android中创建文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-File类方法的介绍"><span class="toc-number">1.2.</span> <span class="toc-text">2.File类方法的介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-文件操作案列"><span class="toc-number">1.3.</span> <span class="toc-text">3.文件操作案列</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/Android/" title="Android">Android<sup>5</sup></a></li>
+		
+			<li><a href="/categories/Eclipse/" title="Eclipse">Eclipse<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/Android/" title="Android">Android<sup>5</sup></a></li>
+		
+			<li><a href="/tags/Eclipse/" title="Eclipse">Eclipse<sup>2</sup></a></li>
+		
+			<li><a href="/tags/Study-Notes/" title="Study Notes">Study Notes<sup>7</sup></a></li>
+		
+			<li><a href="/tags/Summary/" title="Summary">Summary<sup>1</sup></a></li>
+		
+			<li><a href="/tags/debug/" title="debug">debug<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>  
+	  <li><a href="http://pinggod.com/" target="_blank" title="PINGGOD">PINGGOD</a></li>
+    </ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hi ,I&#39;m Aaron Hunter. For now I&#39;m a student at collage. <br/>
+			Mobile development is my interest which I&#39;d like to share with you at this blog.</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/3249826723" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/amsfe" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://amsfe.com" target="_blank" title="amsfe">amsfe</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
