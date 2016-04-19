@@ -139,11 +139,11 @@
   </entry>
   
   <entry>
-    <title>Android Camera &amp; Recorder 学习之路</title>
+    <title>Android Camera &amp; Recorder</title>
     <link href="http://amsfe.com/2016/04/13/android_camera_recoder/"/>
     <id>http://amsfe.com/2016/04/13/android_camera_recoder/</id>
     <published>2016-04-13T09:27:42.000Z</published>
-    <updated>2016-04-19T15:08:44.159Z</updated>
+    <updated>2016-04-19T15:38:43.073Z</updated>
     
     <content type="html">&lt;h2 id=&quot;1-camera介绍&quot;&gt;&lt;a href=&quot;#1-camera介绍&quot; class=&quot;headerlink&quot; title=&quot;1.camera介绍&quot;&gt;&lt;/a&gt;1.camera介绍&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;打开SDK API开发文档查询Camera类的用法&lt;/p&gt;
