@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Android学习之路(一) —— 环境搭建 | AMSFE&#39;s blog</title>
+    <title>MFC —— 文档、视图和框架 | AMSFE&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="amsfe">
     
-    <meta name="description" itemprop="description" content="IDE:Android Studio，第三方模拟器:Genymotion。">
+    <meta name="description" itemprop="description" content="MFC编程入门，文档、视图和框架概述">
     
-    <meta name="keywords" content="Android,环境搭建">
+    
     
     
     <link rel="alternate" href="atom.xml" title="AMSFE&#39;s blog" type="application/atom+xml">
@@ -67,15 +67,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/04/09/android_study_road_1/" title="Android学习之路(一) —— 环境搭建" itemprop="url">Android学习之路(一) —— 环境搭建</a>
+      <a href="/2016/04/18/MFC_doc_view_frame/" title="MFC —— 文档、视图和框架" itemprop="url">MFC —— 文档、视图和框架</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://amsfe.com" title="amsfe">amsfe</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-04-09T02:59:06.000Z" itemprop="datePublished">2016-04-09</time>
-    Updated:<time datetime="2016-04-20T10:37:19.270Z" itemprop="dateModified">2016-04-20</time>
+    <time datetime="2016-04-18T10:35:19.000Z" itemprop="datePublished">2016-04-18</time>
+    Updated:<time datetime="2016-04-20T11:02:45.711Z" itemprop="dateModified">2016-04-20</time>
     
   </p>
 </header>
@@ -87,32 +87,41 @@
 		
 		</div>
 		
-		<ul>
-<li>如果手中没有安卓机而又嫌Android studio自带的虚拟机打开太慢，可以使用第三方安卓虚拟机，笔者推荐使用Genymotion</li>
-<li>Android studio 下载链接: <a href="http://www.android-studio.org/index.php/download" target="_blank" rel="external">http://www.android-studio.org/index.php/download</a></li>
-<li>Genymotion 下载链接: <a href="https://www.genymotion.com/plugins/" target="_blank" rel="external">https://www.genymotion.com/plugins/</a>  (需要先注册才能下载，推荐下载with VM)</li>
-<li>关于Genymotion与Android studio的关联问题请参照Genymotion官网提示和百度教程。</li>
-</ul>
+		<p>用VS开发工具创建多文档或单文档工程时，MFC向导自动为我们生成了C<em>Doc类、C</em>View类和CMainFrame类，它们就是文档类、视图类和框架窗口类。</p>
+<p>文档/视图结构是MFC提供的一种设计，它将数据的处理和显示分开来，这样更便于我们对程序的维护和扩展。</p>
+<p><strong>文档</strong></p>
+<blockquote>
+<p>文档对象用于管理和维护数据，包括保存数据、取出数据以及修改数据等操作，在数据被修改以后，文档可以通知其对应的所有视图更新显示。</p>
+</blockquote>
+<p><strong>视图</strong></p>
+<blockquote>
+<p>视图对象将文档中的数据可视化，负责从文档对象中取出数据显示给用户，并接受用户的输入和编辑，将数据的改变反映给文档对象。视图充当了文档和用户之间媒介的角色。</p>
+</blockquote>
+<p><strong>框架</strong></p>
+<blockquote>
+<p>一个文档可能有多个视图界面，这就需要有框架来管理了。框架就是用来管理文档和视图的。框架窗口是应用程序的主窗口，应用程序执行时会先创建一个最顶层的框架窗口。视图窗口是没有菜单和边界的子窗口，它必须包含在框架窗口中，即置于框架窗口的客户区内。</p>
+</blockquote>
+<p>通俗来讲就像买包子：<br>CView就是所见的前台上的包子，就是界面。<br>CMainFrame就是卖包子的人，是控制的人。<br>而CDoc就是蒸笼里的包子，属于数据。<br>看到的包子（CView）是卖包子的人(CMainFrame)从蒸笼(CDoc)里拿出来的。<br>界面是CView<br>数据是CDoc<br>逻辑是CMainFrame</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Study-Notes/">Study Notes</a><a href="/tags/Android/">Android</a>
+  <span></span> <a href="/tags/MFC/">MFC</a><a href="/tags/Study-Notes/">Study Notes</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Android/">Android</a>
+  <a class="article-category-link" href="/categories/MFC/">MFC</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://amsfe.com/2016/04/09/android_study_road_1/" data-title="Android学习之路(一) —— 环境搭建 | AMSFE&#39;s blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://amsfe.com/2016/04/18/MFC_doc_view_frame/" data-title="MFC —— 文档、视图和框架 | AMSFE&#39;s blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -121,19 +130,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/04/11/android_study_road_2/" title="Android学习之路(二) —— Android基础知识">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  Android学习之路(二) —— Android基础知识</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/03/23/eclipse_debug/"  title="Eclipse的debug技术">
+<a href="/2016/04/15/android_screen/"  title="Android屏幕参数">
  <strong>NEXT:</strong><br/> 
- <span>Eclipse的debug技术
+ <span>Android屏幕参数
 </span>
 </a>
 </div>

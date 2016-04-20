@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amsfe.com/"/>
-  <updated>2016-04-19T15:31:42.071Z</updated>
+  <updated>2016-04-20T11:02:45.711Z</updated>
   <id>http://amsfe.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MFC —— 文档、视图和框架</title>
+    <link href="http://amsfe.com/2016/04/18/MFC_doc_view_frame/"/>
+    <id>http://amsfe.com/2016/04/18/MFC_doc_view_frame/</id>
+    <published>2016-04-18T10:35:19.000Z</published>
+    <updated>2016-04-20T11:02:45.711Z</updated>
+    
+    <content type="html">&lt;p&gt;用VS开发工具创建多文档或单文档工程时，MFC向导自动为我们生成了C&lt;em&gt;Doc类、C&lt;/em&gt;View类和CMainFrame类，它们就是文档类、视图类和框架窗口类。&lt;/p&gt;
+&lt;p&gt;文档/视图结构是MFC提供的一种设计，它将数据的处理和显示分开来，这样更便于我们对程序的维护和扩展。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文档&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文档对象用于管理和维护数据，包括保存数据、取出数据以及修改数据等操作，在数据被修改以后，文档可以通知其对应的所有视图更新显示。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;视图&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;视图对象将文档中的数据可视化，负责从文档对象中取出数据显示给用户，并接受用户的输入和编辑，将数据的改变反映给文档对象。视图充当了文档和用户之间媒介的角色。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;框架&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个文档可能有多个视图界面，这就需要有框架来管理了。框架就是用来管理文档和视图的。框架窗口是应用程序的主窗口，应用程序执行时会先创建一个最顶层的框架窗口。视图窗口是没有菜单和边界的子窗口，它必须包含在框架窗口中，即置于框架窗口的客户区内。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通俗来讲就像买包子：&lt;br&gt;CView就是所见的前台上的包子，就是界面。&lt;br&gt;CMainFrame就是卖包子的人，是控制的人。&lt;br&gt;而CDoc就是蒸笼里的包子，属于数据。&lt;br&gt;看到的包子（CView）是卖包子的人(CMainFrame)从蒸笼(CDoc)里拿出来的。&lt;br&gt;界面是CView&lt;br&gt;数据是CDoc&lt;br&gt;逻辑是CMainFrame&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      MFC编程入门，文档、视图和框架概述
+    
+    </summary>
+    
+      <category term="MFC" scheme="http://amsfe.com/categories/MFC/"/>
+    
+    
+      <category term="MFC" scheme="http://amsfe.com/tags/MFC/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+  </entry>
   
   <entry>
     <title>Android屏幕参数</title>
@@ -59,9 +98,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -132,9 +171,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -269,9 +308,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -489,9 +528,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -500,11 +539,10 @@
     <link href="http://amsfe.com/2016/04/09/android_study_road_1/"/>
     <id>http://amsfe.com/2016/04/09/android_study_road_1/</id>
     <published>2016-04-09T02:59:06.000Z</published>
-    <updated>2016-04-16T14:57:07.210Z</updated>
+    <updated>2016-04-20T10:37:19.270Z</updated>
     
-    <content type="html">&lt;p&gt;如果你跟笔者一样是个移动开发新人，建议选择Android Studio，Eclipse虽说现在用户群还很大，但未来趋势是Android Studio的天下，对于一个初学者来说，直接使用Android Studio学习Android就可以，但如果你是一个公司新人，那就要根据公司情况了，有些老员工熟悉Eclipse那套技术栈，那你就别给自己找麻烦了，乖乖地用Eclipse吧。万变不离其宗，无论是Android Studio还是Eclipse都只是方便我们开发的工具，而我们真正应该掌握的还是Android核心知识。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果你手中恰巧没有安卓机而又嫌Android studio自带的虚拟机打开太慢，可以使用第三方安卓虚拟机，笔者推荐使用Genymotion&lt;/li&gt;
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;如果手中没有安卓机而又嫌Android studio自带的虚拟机打开太慢，可以使用第三方安卓虚拟机，笔者推荐使用Genymotion&lt;/li&gt;
 &lt;li&gt;Android studio 下载链接: &lt;a href=&quot;http://www.android-studio.org/index.php/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.android-studio.org/index.php/download&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Genymotion 下载链接: &lt;a href=&quot;https://www.genymotion.com/plugins/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.genymotion.com/plugins/&lt;/a&gt;  (需要先注册才能下载，推荐下载with VM)&lt;/li&gt;
 &lt;li&gt;关于Genymotion与Android studio的关联问题请参照Genymotion官网提示和百度教程。&lt;/li&gt;
@@ -513,16 +551,16 @@
     
     <summary type="html">
     
-      工欲善其事，必先利其器，对于Andorid开发者来说Android Studio无疑是最合适的选择。
+      IDE:Android Studio，第三方模拟器:Genymotion。
     
     </summary>
     
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
