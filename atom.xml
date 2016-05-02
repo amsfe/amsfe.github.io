@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>AMSFE&#39;s blog</title>
-  <subtitle>Stay hungry,Stay foolish</subtitle>
+  <title>AMSFE</title>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amsfe.com/"/>
-  <updated>2016-04-20T11:11:26.959Z</updated>
+  <updated>2016-05-02T08:35:03.644Z</updated>
   <id>http://amsfe.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://amsfe.com/2016/04/18/MFC_doc_view_frame/"/>
     <id>http://amsfe.com/2016/04/18/MFC_doc_view_frame/</id>
     <published>2016-04-18T10:35:19.000Z</published>
-    <updated>2016-04-20T11:11:26.959Z</updated>
+    <updated>2016-05-02T08:35:03.644Z</updated>
     
     <content type="html">&lt;p&gt;用VS开发工具创建多文档或单文档工程时，MFC向导自动为我们生成了C&lt;em&gt;Doc类、C&lt;/em&gt;View类和CMainFrame类，它们就是文档类、视图类和框架窗口类。&lt;/p&gt;
 &lt;p&gt;文档/视图结构是MFC提供的一种设计，它将数据的处理和显示分开来，这样更便于我们对程序的维护和扩展。&lt;/p&gt;
@@ -38,7 +38,11 @@
 &lt;/blockquote&gt;
 &lt;p&gt;通俗来讲就像买包子：&lt;br&gt;CView就是所见的前台上的包子，就是界面。&lt;br&gt;CMainFrame就是卖包子的人，是控制的人。&lt;br&gt;而CDoc就是蒸笼里的包子，属于数据。&lt;br&gt;看到的包子（CView）是卖包子的人(CMainFrame)从蒸笼(CDoc)里拿出来的。&lt;br&gt;界面是CView&lt;br&gt;数据是CDoc&lt;br&gt;逻辑是CMainFrame&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;ref:&lt;a href=&quot;http://www.jizhuomi.com/software/221.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jizhuomi.com/software/221.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考资料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jizhuomi.com/software/221.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jizhuomi.com/software/221.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 </content>
     
     <summary type="html">
@@ -50,9 +54,9 @@
       <category term="MFC" scheme="http://amsfe.com/categories/MFC/"/>
     
     
-      <category term="MFC" scheme="http://amsfe.com/tags/MFC/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="MFC" scheme="http://amsfe.com/tags/MFC/"/>
     
   </entry>
   
@@ -100,9 +104,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
   </entry>
   
@@ -173,9 +177,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
   </entry>
   
@@ -310,9 +314,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
   </entry>
   
@@ -530,9 +534,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
   </entry>
   
@@ -560,9 +564,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
   </entry>
   
