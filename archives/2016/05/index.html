@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Eclipse,使用问题" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -82,19 +82,15 @@
 
 
 
-<meta name="description" content="用Eclipse开发经常遇到的一些问题的解决方法。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Eclipse的使用问题总结">
-<meta property="og:url" content="http://amsfe.com/2016/03/20/eclipse_problem_summary/index.html">
+<meta name="description" content="Stay hungry,Stay foolish">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AMSFE">
+<meta property="og:url" content="http://amsfe.com/archives/2016/05/index.html">
 <meta property="og:site_name" content="AMSFE">
-<meta property="og:description" content="用Eclipse开发经常遇到的一些问题的解决方法。">
-<meta property="og:image" content="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager_Proxy_Setting.png">
-<meta property="og:image" content="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager.png">
-<meta property="og:updated_time" content="2016-04-16T15:27:02.158Z">
+<meta property="og:description" content="Stay hungry,Stay foolish">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eclipse的使用问题总结">
-<meta name="twitter:description" content="用Eclipse开发经常遇到的一些问题的解决方法。">
-<meta name="twitter:image" content="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager_Proxy_Setting.png">
+<meta name="twitter:title" content="AMSFE">
+<meta name="twitter:description" content="Stay hungry,Stay foolish">
 
 
 
@@ -112,7 +108,7 @@
   };
 </script>
 
-  <title> Eclipse的使用问题总结 | AMSFE </title>
+  <title> Archive | AMSFE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -133,7 +129,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,150 +257,66 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      Um..! 9 posts in total. Keep on posting.
+    </span>
+
     
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Eclipse的使用问题总结
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-20T23:42:12+08:00" content="2016-03-20">
-              2016-03-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Eclipse/" itemprop="url" rel="index">
-                    <span itemprop="name">Eclipse</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
-      
-        <p><strong>1. eclipse提示Note: This element neither has attached source nor attached Javadoc and hence no Javadoc could be found.解决方案：</strong></p>
-<p>(1).Android x.x.x（所用版本）documentation for Androidsdk（API开发文档）未安装：<br>adt-bundle-windows-x86_64-20140321\sdk\目录下缺少了个docs文档。于是每次鼠标停放在函数名上时，总提示：Note: This element neither has attached source nor attached Javadoc and hence no Javadoc could be found.可通过镜像网站下载安装包（关于如何通过镜像网站下载安装包，教程请参考↓↓↓）。</p>
-<p>(2).API开发文档已安装：<br>解决方案请参考：<a href="http://blog.csdn.net/listening_music/article/details/6868076" target="_blank" rel="external">http://blog.csdn.net/listening_music/article/details/6868076</a> </p>
-<p><strong>2. Android SDK Manager 更新代理配置：</strong></p>
-<p>因为GFW的原因，国内使用SDK Manager下载会出现问题，可以使用镜像网站解决<br>镜像网站：<a href="http://mirrors.neusoft.edu.cn/" target="_blank" rel="external">http://mirrors.neusoft.edu.cn/</a><br>配置步骤：<br>(1).启动 Android SDK Manager ，打开主界面，依次选择「Tools」、「Options…」，弹出『Android SDK Manager - Settings』窗口；<br>(2).在『Android SDK Manager - Settings』窗口中，在「HTTP Proxy Server」和「HTTP Proxy Port」输入框内填入mirrors.neusoft.edu.cn和80，并且选中「Force https://… sources to be fetched using…」复选框。设置完成后单击「Close」按钮关闭『Android SDK Manager - Settings』窗口返回到主界面；</p>
-<p><img src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager_Proxy_Setting.png" alt="Android_SDK_Manager_Proxy_Setting.png"></p>
-<p>3.依次选择「Packages」、「Reload」。</p>
-<p><img src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroid_SDK_Manager.png" alt="Android_SDK_Manager.png"></p>
-
-      
-    </div>
-    
-    <div>
       
         
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Study-Notes/" rel="tag">#Study Notes</a>
-          
-            <a href="/tags/Eclipse/" rel="tag">#Eclipse</a>
-          
-            <a href="/tags/Summary/" rel="tag">#Summary</a>
-          
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
         </div>
       
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/23/eclipse_debug/" rel="prev" title="Eclipse的debug技术">
-                Eclipse的debug技术 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
-      
-    </footer>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2016/05/02/git_1/" itemprop="url">
+              
+                <span itemprop="name">Git�汾�������ţ�һ��</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-05-02T23:43:01+08:00"
+              content="2016-05-02" >
+          05-02
+        </time>
+      </div>
+
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+    
+
+  </section>
+
+  
+
 
 
           </div>
@@ -412,10 +324,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -435,17 +343,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2Fmustache3_back.jpg"
@@ -536,17 +435,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -643,9 +531,11 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   

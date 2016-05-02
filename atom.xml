@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amsfe.com/"/>
-  <updated>2016-05-02T08:35:03.644Z</updated>
+  <updated>2016-05-02T16:07:13.083Z</updated>
   <id>http://amsfe.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git�汾�������ţ�һ��</title>
+    <link href="http://amsfe.com/2016/05/02/git_1/"/>
+    <id>http://amsfe.com/2016/05/02/git_1/</id>
+    <published>2016-05-02T15:43:01.000Z</published>
+    <updated>2016-05-02T16:07:13.083Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;���ڰ汾����&quot;&gt;&lt;a href=&quot;#���ڰ汾����&quot; class=&quot;headerlink&quot; title=&quot;���ڰ汾����&quot;&gt;&lt;/a&gt;���ڰ汾����&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;�汾������һ�ּ�¼һ���������ļ����ݱ仯���Ա㽫�������ض��汾�޶�������ϵͳ��&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;���ذ汾����ϵͳ������RCS&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2Flocal_VCS.png&quot; alt=&quot;local_VCS.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;���л��İ汾����ϵͳ(Centralized Version Control Systems������ CVCS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FCVCS.png&quot; alt=&quot;CVCS.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;�ֲ�ʽ�汾����ϵͳ������Git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FDVCS.png&quot; alt=&quot;DVCS.png&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      Git�汾��������
+    
+    </summary>
+    
+      <category term="Git" scheme="http://amsfe.com/categories/Git/"/>
+    
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Git" scheme="http://amsfe.com/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>MFC —— 文档、视图和框架</title>
@@ -54,9 +93,9 @@
       <category term="MFC" scheme="http://amsfe.com/categories/MFC/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="MFC" scheme="http://amsfe.com/tags/MFC/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
   </entry>
   
@@ -104,9 +143,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -177,9 +216,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -314,9 +353,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -325,7 +364,7 @@
     <link href="http://amsfe.com/2016/04/11/android_study_road_2/"/>
     <id>http://amsfe.com/2016/04/11/android_study_road_2/</id>
     <published>2016-04-11T13:07:34.000Z</published>
-    <updated>2016-04-21T13:02:43.812Z</updated>
+    <updated>2016-05-02T16:07:21.258Z</updated>
     
     <content type="html">&lt;h2 id=&quot;一、认识Android中的Activity组件&quot;&gt;&lt;a href=&quot;#一、认识Android中的Activity组件&quot; class=&quot;headerlink&quot; title=&quot;一、认识Android中的Activity组件&quot;&gt;&lt;/a&gt;一、认识Android中的Activity组件&lt;/h2&gt;&lt;h3 id=&quot;1-什么是Activity&quot;&gt;&lt;a href=&quot;#1-什么是Activity&quot; class=&quot;headerlink&quot; title=&quot;1.什么是Activity?&quot;&gt;&lt;/a&gt;1.什么是Activity?&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;简单来说Activity就是一个界面，例如打电话、发短信界面。&lt;/p&gt;
@@ -534,9 +573,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -564,9 +603,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
