@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Git,版本控制" />
 
 
 
@@ -82,15 +82,20 @@
 
 
 
-<meta name="description" content="Stay hungry,Stay foolish">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AMSFE">
-<meta property="og:url" content="http://amsfe.com/tags/Summary/index.html">
+<meta name="description" content="Git基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git版本控制入门（二）">
+<meta property="og:url" content="http://amsfe.com/2016/05/03/git_2/index.html">
 <meta property="og:site_name" content="AMSFE">
-<meta property="og:description" content="Stay hungry,Stay foolish">
+<meta property="og:description" content="Git基础">
+<meta property="og:image" content="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FCVS_checkins_over_time.png">
+<meta property="og:image" content="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FGit_checkins_over_time.png">
+<meta property="og:image" content="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FRepository.png">
+<meta property="og:updated_time" content="2016-05-05T03:45:01.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AMSFE">
-<meta name="twitter:description" content="Stay hungry,Stay foolish">
+<meta name="twitter:title" content="Git版本控制入门（二）">
+<meta name="twitter:description" content="Git基础">
+<meta name="twitter:image" content="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FCVS_checkins_over_time.png">
 
 
 
@@ -108,7 +113,7 @@
   };
 </script>
 
-  <title> Tag: Summary | AMSFE </title>
+  <title> Git版本控制入门（二） | AMSFE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -129,7 +134,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,46 +262,187 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Summary
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Git版本控制入门（二）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-03T15:33:46+08:00" content="2016-05-03">
+              2016-05-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="直接记录快照，而非差异比较"><a href="#直接记录快照，而非差异比较" class="headerlink" title="直接记录快照，而非差异比较"></a>直接记录快照，而非差异比较</h1><ul>
+<li><p>快照：快照是特定数据集的一个完整可用<strong>拷贝</strong>，该数据集包含源数据在拷贝点的<strong>静态映像</strong>；快照可以使<strong>数据</strong>再现的一个副本或者复制。</p>
+</li>
+<li><p>其他大部分系统已文件变更列表的方式存储信息。如：CVS、Subversion、Perforce、Bazaar等，这类系统将它们保存的信息看作是一组基本文件和每个文件随时间逐步累积的差异</p>
+</li>
+</ul>
+<p><img src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FCVS_checkins_over_time.png" alt="CVS_checkins_over_time.png"></p>
+<ul>
+<li>Git更像是把数据看作是对小型文件系统的一组快照。每次提交更新，或在Git中保存项目状态时，它主要对当时的全部文件制作一个快照并保存这个快照的索引。为了高效，如果文件没有修改，Git不再重新存储该文件，而是只保留一个链接指向之前存储的文件。Git对待数据更像是一个快照流。</li>
+</ul>
+<p><img src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FGit_checkins_over_time.png" alt="Git_checkins_over_time.png"></p>
+<h1 id="近乎所有操作都是本地执行"><a href="#近乎所有操作都是本地执行" class="headerlink" title="近乎所有操作都是本地执行"></a>近乎所有操作都是本地执行</h1><ul>
+<li>在Git中的绝大多数操作都是只需要访问本地文件和资源，一般不需要来自网络上其他计算机的信息。</li>
+</ul>
+<h1 id="Git保证完整性"><a href="#Git保证完整性" class="headerlink" title="Git保证完整性"></a>Git保证完整性</h1><ul>
+<li>Git中所有数据在存储前都计算校验和，然后以校验和来引用。Git用以计算校验和的机制叫做SHA-1散列(hash，哈希)。这是一个由40个十六进制字符(0-9和a-f)组成的字符串。</li>
+</ul>
+<h1 id="三种状态"><a href="#三种状态" class="headerlink" title="三种状态"></a>三种状态</h1><ul>
+<li><p>Git有三种状态：已提交(committed)、已修改(modified)和已暂存(staged)。已提交表示数据已经安全的保存在本地数据库中。已修改表示修改了文件，但还没保存到数据库中。已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。</p>
+</li>
+<li><p>Git项目的三个工作区域的概念：Git仓库、工作目录和暂存区域。</p>
+</li>
+</ul>
+<p><img src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FRepository.png" alt="Repository.png"></p>
+<ul>
+<li><p>Git仓库目录是Git用来保存项目的元数据和对象数据库的地方。这是Git中最重要的部分，从其他计算机克隆仓库时，拷贝的就是这里的数据。</p>
+</li>
+<li><p>工作目录是对项目的某个版本独立提取出来的内容。这些从Git仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。</p>
+</li>
+<li><p>暂存区域是一个文件，保存了下次将提交的文件列表信息，一般在Git仓库目录中。有时也被称作”索引”。</p>
+</li>
+<li><p>基本的Git工作流程如下：</p>
+<p>1.在工作目录中修改文件。<br>2.暂存文件，将文件的快照放入暂存区域。<br>3.提交更新，找到暂存区域的文件，将快照永久性存储到Git仓库目录。</p>
+</li>
+<li><p>如果Git目录中保存着的特定版本文件，就属于已提交状态。如果做了修改并已放入暂存区域，就属于已暂存状态。如果自上次取出后，作了修改但还没有放入暂存区域，就是已修改状态。</p>
+</li>
+</ul>
+<hr>
+<p>参考资料:</p>
+<ul>
+<li><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">https://git-scm.com/book/zh/v2</a></li>
+</ul>
+<hr>
 
-      <h1 class="post-title">
+      
+    </div>
+    
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/03/20/eclipse_problem_summary/" itemprop="url">
-              
-                <span itemprop="name">Eclipse的使用问题总结</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+      
+    </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-03-20T23:42:12+08:00"
-              content="2016-03-20" >
-          03-20
-        </time>
-      </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Study-Notes/" rel="tag">#Study Notes</a>
+          
+            <a href="/tags/Git/" rel="tag">#Git</a>
+          
+        </div>
+      
 
-    </header>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/02/git_1/" rel="next" title="Git版本控制入门（一）">
+                <i class="fa fa-chevron-left"></i> Git版本控制入门（一）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/05/git_3/" rel="prev" title="Git版本控制入门（三）">
+                Git版本控制入门（三） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -304,6 +450,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -323,8 +473,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2Fmustache3_back.jpg"
@@ -415,6 +574,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#直接记录快照，而非差异比较"><span class="nav-number">1.</span> <span class="nav-text">直接记录快照，而非差异比较</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#近乎所有操作都是本地执行"><span class="nav-number">2.</span> <span class="nav-text">近乎所有操作都是本地执行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git保证完整性"><span class="nav-number">3.</span> <span class="nav-text">Git保证完整性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三种状态"><span class="nav-number">4.</span> <span class="nav-text">三种状态</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -511,6 +681,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amsfe.com/"/>
-  <updated>2016-05-02T16:09:55.229Z</updated>
+  <updated>2016-05-05T03:56:14.501Z</updated>
   <id>http://amsfe.com/</id>
   
   <author>
@@ -16,11 +16,134 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Git版本控制入门（三）</title>
+    <link href="http://amsfe.com/2016/05/05/git_3/"/>
+    <id>http://amsfe.com/2016/05/05/git_3/</id>
+    <published>2016-05-05T03:06:35.000Z</published>
+    <updated>2016-05-05T03:56:14.501Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;配置简介&quot;&gt;&lt;a href=&quot;#配置简介&quot; class=&quot;headerlink&quot; title=&quot;配置简介&quot;&gt;&lt;/a&gt;配置简介&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Git自带一个&lt;code&gt;git config&lt;/code&gt;的工具来帮助设置控制Git外观和行为的配置变量。这些变量存储在三个不同的位置：&lt;/p&gt;
+&lt;p&gt;1.&lt;code&gt;/etc/gitconfig&lt;/code&gt;文件：包含系统上每一个用户及他们仓库的通用配置。使用带有&lt;code&gt;--system&lt;/code&gt;选项的&lt;code&gt;git config&lt;/code&gt;时，它会从此文件读写配置信息。&lt;br&gt;2.&lt;code&gt;~/.gitconfig&lt;/code&gt;或&lt;code&gt;~/.config/git/config&lt;/code&gt;文件：只针对 当前用户。可以传递&lt;code&gt;--global&lt;/code&gt;选项让Git读写此文件。&lt;br&gt;3.当前使用仓库的Git目录中的&lt;code&gt;config&lt;/code&gt;文件(就是&lt;code&gt;.git/config&lt;/code&gt;)：针对该仓库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;每一个级别覆盖上一个级别&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;用户信息&quot;&gt;&lt;a href=&quot;#用户信息&quot; class=&quot;headerlink&quot; title=&quot;用户信息&quot;&gt;&lt;/a&gt;用户信息&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;设置用户名称和邮件地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.name &amp;quot;amsfe&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.email amsfe@gmail.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;文本编辑器&quot;&gt;&lt;a href=&quot;#文本编辑器&quot; class=&quot;headerlink&quot; title=&quot;文本编辑器&quot;&gt;&lt;/a&gt;文本编辑器&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;设置默认文本编辑器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global core.editor emacs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;检查配置信息&quot;&gt;&lt;a href=&quot;#检查配置信息&quot; class=&quot;headerlink&quot; title=&quot;检查配置信息&quot;&gt;&lt;/a&gt;检查配置信息&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;git config --list&lt;/code&gt;命令可以列出所有Git当时能找到的配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可以通过&lt;code&gt;git config &amp;lt;key&amp;gt;&lt;/code&gt;来检查Git某一项的配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2Fconfig_list.png&quot; alt=&quot;config_list.png&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;获取帮助&quot;&gt;&lt;a href=&quot;#获取帮助&quot; class=&quot;headerlink&quot; title=&quot;获取帮助&quot;&gt;&lt;/a&gt;获取帮助&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git help &amp;lt;verb&amp;gt;&lt;/code&gt; 或&lt;code&gt;git &amp;lt;verb&amp;gt; --help&lt;/code&gt;例如：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ git help config
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;参考资料:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://git-scm.com/book/zh/v2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</content>
+    
+    <summary type="html">
+    
+      Git的配置简介
+    
+    </summary>
+    
+      <category term="Git" scheme="http://amsfe.com/categories/Git/"/>
+    
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Git" scheme="http://amsfe.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git版本控制入门（二）</title>
+    <link href="http://amsfe.com/2016/05/03/git_2/"/>
+    <id>http://amsfe.com/2016/05/03/git_2/</id>
+    <published>2016-05-03T07:33:46.000Z</published>
+    <updated>2016-05-05T03:45:01.452Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;直接记录快照，而非差异比较&quot;&gt;&lt;a href=&quot;#直接记录快照，而非差异比较&quot; class=&quot;headerlink&quot; title=&quot;直接记录快照，而非差异比较&quot;&gt;&lt;/a&gt;直接记录快照，而非差异比较&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;快照：快照是特定数据集的一个完整可用&lt;strong&gt;拷贝&lt;/strong&gt;，该数据集包含源数据在拷贝点的&lt;strong&gt;静态映像&lt;/strong&gt;；快照可以使&lt;strong&gt;数据&lt;/strong&gt;再现的一个副本或者复制。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;其他大部分系统已文件变更列表的方式存储信息。如：CVS、Subversion、Perforce、Bazaar等，这类系统将它们保存的信息看作是一组基本文件和每个文件随时间逐步累积的差异&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FCVS_checkins_over_time.png&quot; alt=&quot;CVS_checkins_over_time.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git更像是把数据看作是对小型文件系统的一组快照。每次提交更新，或在Git中保存项目状态时，它主要对当时的全部文件制作一个快照并保存这个快照的索引。为了高效，如果文件没有修改，Git不再重新存储该文件，而是只保留一个链接指向之前存储的文件。Git对待数据更像是一个快照流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FGit_checkins_over_time.png&quot; alt=&quot;Git_checkins_over_time.png&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;近乎所有操作都是本地执行&quot;&gt;&lt;a href=&quot;#近乎所有操作都是本地执行&quot; class=&quot;headerlink&quot; title=&quot;近乎所有操作都是本地执行&quot;&gt;&lt;/a&gt;近乎所有操作都是本地执行&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;在Git中的绝大多数操作都是只需要访问本地文件和资源，一般不需要来自网络上其他计算机的信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Git保证完整性&quot;&gt;&lt;a href=&quot;#Git保证完整性&quot; class=&quot;headerlink&quot; title=&quot;Git保证完整性&quot;&gt;&lt;/a&gt;Git保证完整性&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Git中所有数据在存储前都计算校验和，然后以校验和来引用。Git用以计算校验和的机制叫做SHA-1散列(hash，哈希)。这是一个由40个十六进制字符(0-9和a-f)组成的字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;三种状态&quot;&gt;&lt;a href=&quot;#三种状态&quot; class=&quot;headerlink&quot; title=&quot;三种状态&quot;&gt;&lt;/a&gt;三种状态&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Git有三种状态：已提交(committed)、已修改(modified)和已暂存(staged)。已提交表示数据已经安全的保存在本地数据库中。已修改表示修改了文件，但还没保存到数据库中。已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Git项目的三个工作区域的概念：Git仓库、工作目录和暂存区域。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FRepository.png&quot; alt=&quot;Repository.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Git仓库目录是Git用来保存项目的元数据和对象数据库的地方。这是Git中最重要的部分，从其他计算机克隆仓库时，拷贝的就是这里的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;工作目录是对项目的某个版本独立提取出来的内容。这些从Git仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;暂存区域是一个文件，保存了下次将提交的文件列表信息，一般在Git仓库目录中。有时也被称作”索引”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基本的Git工作流程如下：&lt;/p&gt;
+&lt;p&gt;1.在工作目录中修改文件。&lt;br&gt;2.暂存文件，将文件的快照放入暂存区域。&lt;br&gt;3.提交更新，找到暂存区域的文件，将快照永久性存储到Git仓库目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果Git目录中保存着的特定版本文件，就属于已提交状态。如果做了修改并已放入暂存区域，就属于已暂存状态。如果自上次取出后，作了修改但还没有放入暂存区域，就是已修改状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;参考资料:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://git-scm.com/book/zh/v2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</content>
+    
+    <summary type="html">
+    
+      Git基础
+    
+    </summary>
+    
+      <category term="Git" scheme="http://amsfe.com/categories/Git/"/>
+    
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Git" scheme="http://amsfe.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git版本控制入门（一）</title>
     <link href="http://amsfe.com/2016/05/02/git_1/"/>
     <id>http://amsfe.com/2016/05/02/git_1/</id>
     <published>2016-05-02T15:43:01.000Z</published>
-    <updated>2016-05-02T16:09:55.229Z</updated>
+    <updated>2016-05-04T04:00:05.784Z</updated>
     
     <content type="html">&lt;h1 id=&quot;关于版本控制&quot;&gt;&lt;a href=&quot;#关于版本控制&quot; class=&quot;headerlink&quot; title=&quot;关于版本控制&quot;&gt;&lt;/a&gt;关于版本控制&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。&lt;/p&gt;
@@ -37,6 +160,11 @@
 &lt;li&gt;分布式版本控制系统：例如Git&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FDVCS.png&quot; alt=&quot;DVCS.png&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考资料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://git-scm.com/book/zh/v2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
@@ -93,9 +221,9 @@
       <category term="MFC" scheme="http://amsfe.com/categories/MFC/"/>
     
     
-      <category term="MFC" scheme="http://amsfe.com/tags/MFC/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="MFC" scheme="http://amsfe.com/tags/MFC/"/>
     
   </entry>
   
@@ -632,9 +760,9 @@
       <category term="Eclipse" scheme="http://amsfe.com/categories/Eclipse/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="Eclipse" scheme="http://amsfe.com/tags/Eclipse/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
       <category term="debug" scheme="http://amsfe.com/tags/debug/"/>
     
@@ -666,9 +794,9 @@
       <category term="Eclipse" scheme="http://amsfe.com/categories/Eclipse/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="Eclipse" scheme="http://amsfe.com/tags/Eclipse/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
       <category term="Summary" scheme="http://amsfe.com/tags/Summary/"/>
     
