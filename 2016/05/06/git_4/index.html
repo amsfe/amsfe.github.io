@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android,屏幕参数" />
+  <meta name="keywords" content="Git,版本控制" />
 
 
 
@@ -82,16 +82,16 @@
 
 
 
-<meta name="description" content="Android屏幕参数简介。">
+<meta name="description" content="Git与远程仓库的连接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android屏幕参数">
-<meta property="og:url" content="http://amsfe.com/2016/04/15/android_screen/index.html">
+<meta property="og:title" content="Git版本控制入门（四）">
+<meta property="og:url" content="http://amsfe.com/2016/05/06/git_4/index.html">
 <meta property="og:site_name" content="AMSFE">
-<meta property="og:description" content="Android屏幕参数简介。">
-<meta property="og:updated_time" content="2016-04-19T15:31:42.071Z">
+<meta property="og:description" content="Git与远程仓库的连接">
+<meta property="og:updated_time" content="2016-05-06T15:39:38.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android屏幕参数">
-<meta name="twitter:description" content="Android屏幕参数简介。">
+<meta name="twitter:title" content="Git版本控制入门（四）">
+<meta name="twitter:description" content="Git与远程仓库的连接">
 
 
 
@@ -109,7 +109,7 @@
   };
 </script>
 
-  <title> Android屏幕参数 | AMSFE </title>
+  <title> Git版本控制入门（四） | AMSFE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -279,7 +279,7 @@
             
             
               
-                Android屏幕参数
+                Git版本控制入门（四）
               
             
           </h1>
@@ -291,8 +291,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-15T23:27:13+08:00" content="2016-04-15">
-              2016-04-15
+            <time itemprop="dateCreated" datetime="2016-05-06T11:52:31+08:00" content="2016-05-06">
+              2016-05-06
             </time>
           </span>
 
@@ -305,8 +305,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
                   </a>
                 </span>
 
@@ -338,32 +338,80 @@
       
 
       
-        <blockquote>
+        <h1 id="1-注册账户以及创建仓库"><a href="#1-注册账户以及创建仓库" class="headerlink" title="1.注册账户以及创建仓库"></a>1.注册账户以及创建仓库</h1><p>注册github账号，记住账号名和邮箱（之后会用），创建仓库（免费用户只能建公共仓库），</p>
+<h1 id="2-安装客户端msysgit"><a href="#2-安装客户端msysgit" class="headerlink" title="2.安装客户端msysgit"></a>2.安装客户端msysgit</h1><p>github是服务端，要想在自己电脑上使用git还需要一个git客户端，这里选用msysgit，基于命令行的</p>
+<h1 id="3-配置Git"><a href="#3-配置Git" class="headerlink" title="3.配置Git"></a>3.配置Git</h1><p>为了把本地的仓库传到github，还需要配置ssh key</p>
+<ol>
+<li>首先在本地创建ssh key</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;</span><br></pre></td></tr></table></figure>
+<p>此处的your_email@youremail.com即为注册github时的邮箱。</p>
+<ol>
+<li><p>添加ssh key到github</p>
 <ul>
-<li><p>QVGA 即”Quarter VGA”。顾名思义即VGA的四分之一尺寸，亦即在液晶屏幕（LCD）上输出的分辨率是240×320像素。QVGA支持屏幕旋转，可以开发出相应的程序，以显示旋转90°、180°、270°屏幕位置。由HandEra公司发布。多用于手持/移动设备。</p>
-</li>
-<li><p>需要说明的是有些媒体把QVGA屏幕当成与TFT和TFD等LCD材质相同的东西是错误的，QVGA屏幕的说法多见与日本的一些手机中，目前采用微软Pocket PC操作系统的智能手机屏幕也大多是320×240像素的QVGA屏幕。 </p>
-</li>
-<li><p>所谓QVGA液晶技术，就是在液晶屏幕上输出的分辨率是240×320的液晶输出方式。这个分辨率其实和屏幕本身的大小并没有关系。比如说，如果2.1英寸液晶显示屏幕可以显示240×320分辨率的图像，就叫做“QVGA 2.1英寸液晶显示屏”；如果3.8英寸液晶显示屏幕可以显示240×320的图像，就叫做“QVGA 3.8英寸液晶显示屏”，以上两种情况虽然具有相同的分辨率，但是由于尺寸的不同实际的视觉效果也不同，一般</p>
-</li>
-<li><p>HVGA 即VGA(640<em>480)的一半,分辨率为(480</em>320),(3:2宽高比)<br>它是用于各种各样的PDA设备，首先是2002年的索尼Clie PEG - NR70，<br>来说屏幕小的一个画面自然也会细腻一些。</p>
-</li>
-<li><p>WVGA 数码产品屏幕材质的一种，VGA的另一种形式，比VGA分辨率高，别名 ： Wide VGA, ，其分辩率为800×480象素。是扩大了VGA（640×480)的分辨率。应用于PDA和手机等，因为很多网页的宽度都是800，所以WVGA的屏幕会更加适和于浏览网页，可以说是未来手持设备的分辨率的大趋势<br>术语和概念</p>
-</li>
+<li>打开本地C:\Documents and Settings\Administrator.ssh\id_rsa.pub文件</li>
 </ul>
-</blockquote>
+<p>此文件里的内容为刚才生成的密钥。默认为隐藏文件，需要手动显示。</p>
 <ul>
-<li>单位：像素 <ul>
-<li>WVGA854: 854*480</li>
-<li>WVGA800: 800*480</li>
-<li>HVGA: 640*480 </li>
-<li>QVGA: 320*240</li>
-<li>WQVGA432：432*240</li>
-<li>WQVGA400：400*240 </li>
-<li>Android3.0 WXGA：800*128</li>
-</ul>
+<li><p>登录github系统。点击右上角的Account Settings -&gt; SSH Public keys -&gt; add another public keys</p>
+</li>
+<li><p>把本地生成的密钥复制到里面（key文本框中），点击add key</p>
 </li>
 </ul>
+</li>
+<li><p>测试</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	$ ssh -T git@github.com</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">4. 设置username和email</span><br></pre></td></tr></table></figure>
+<pre><code>$ git config --gobal user.name &quot;your name&quot;
+$ git config --gobal user.email &quot;your_email@youremail.com&quot;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 4.提交代码到远端（创建好的仓库）</span><br><span class="line"></span><br><span class="line">进入本地的工程文件夹，使用命令</span><br></pre></td></tr></table></figure>
+<pre><code>$ git init
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">初始化代码文件夹</span><br></pre></td></tr></table></figure>
+<pre><code>$ touch README.md
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">创建README.md文件</span><br></pre></td></tr></table></figure>
+<pre><code>$ git add .
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将所有文件加入要提交的缓存</span><br></pre></td></tr></table></figure>
+<pre><code>$ git add filename  
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">单独提交一个文件，前提是只修改了这一个文件</span><br></pre></td></tr></table></figure>
+<pre><code>$ git commit -m &quot;first commit&quot;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将修改在本地提交（此时还未提交到远端），为本次提交命名</span><br><span class="line"></span><br><span class="line">可以查看本次提交</span><br></pre></td></tr></table></figure>
+<pre><code>first commit
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将本地版本库与远端的版本库连接起来</span><br></pre></td></tr></table></figure>
+<pre><code>$ git remote add origin git@github.com:amsfe/iMusic.git 
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将本地代码推送到远端</span><br></pre></td></tr></table></figure>
+<pre><code>$ git push -u origin master
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 5.更新代码</span><br><span class="line"></span><br><span class="line">修改了本地工程文件夹下的文件</span><br></pre></td></tr></table></figure>
+<pre><code>$ git add .
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将修改的文件增加进缓存</span><br></pre></td></tr></table></figure>
+<pre><code>$ git commit -m &quot;update:文件夹/文件&quot;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将文件提交到远端</span><br></pre></td></tr></table></figure>
+<pre><code>$ git push
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 6.关于Git的几点说明</span><br><span class="line"></span><br><span class="line">git本地仓库由三部分共同管理实现；1.工作目录，持有实际文件 2.暂存区，临时保存了文件的改动 3.HEAD区，指向最后一次提交的结果</span><br></pre></td></tr></table></figure>
+<pre><code>$ git init
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">初始化git本地文件夹</span><br></pre></td></tr></table></figure>
+<pre><code>$ git add .
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">或</span><br></pre></td></tr></table></figure>
+<pre><code>$ git add filename
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">提出更改，将它们提交到缓存区</span><br></pre></td></tr></table></figure>
+<pre><code>$ git commit -m &quot;代码提交信息&quot;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">实际提交代码命令，改动已经提交到HEAD，但还没有提交到远端版本库</span><br></pre></td></tr></table></figure>
+<pre><code>$ git remote add origin &lt;server&gt; 
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">连接到远端仓库（可以在工程文件夹下隐藏的.git文件夹里的config文件中手动更改要连接的远端仓库）</span><br></pre></td></tr></table></figure>
+<pre><code>$ git push origin master
+</code></pre><p>```</p>
+<p>将改动提交到远端</p>
+<hr>
+<p>参考资料:</p>
+<ul>
+<li><p><a href="http://www.360doc.com/content/13/1030/07/3300331_325214833.shtml" target="_blank" rel="external">http://www.360doc.com/content/13/1030/07/3300331_325214833.shtml</a></p>
+</li>
+<li><p><a href="http://www.tuicool.com/articles/6Vvqai" target="_blank" rel="external">http://www.tuicool.com/articles/6Vvqai</a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">http://www.jianshu.com/p/05289a4bc8b2</a></p>
+</li>
+</ul>
+<hr>
 
       
     </div>
@@ -386,7 +434,7 @@
           
             <a href="/tags/Study-Notes/" rel="tag">#Study Notes</a>
           
-            <a href="/tags/Android/" rel="tag">#Android</a>
+            <a href="/tags/Git/" rel="tag">#Git</a>
           
         </div>
       
@@ -395,17 +443,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/14/android_data_storage/" rel="next" title="Android数据存储">
-                <i class="fa fa-chevron-left"></i> Android数据存储
+              <a href="/2016/05/05/git_3/" rel="next" title="Git版本控制入门（三）">
+                <i class="fa fa-chevron-left"></i> Git版本控制入门（三）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/18/MFC_doc_view_frame/" rel="prev" title="MFC —— 文档、视图和框架">
-                MFC —— 文档、视图和框架 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -560,7 +604,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-注册账户以及创建仓库"><span class="nav-number">1.</span> <span class="nav-text">1.注册账户以及创建仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-安装客户端msysgit"><span class="nav-number">2.</span> <span class="nav-text">2.安装客户端msysgit</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-配置Git"><span class="nav-number">3.</span> <span class="nav-text">3.配置Git</span></a></li></ol></div>
             
           </div>
         </section>
