@@ -88,7 +88,7 @@
 <meta property="og:url" content="http://amsfe.com/2016/05/06/git_4/index.html">
 <meta property="og:site_name" content="AMSFE">
 <meta property="og:description" content="Git与远程仓库的连接">
-<meta property="og:updated_time" content="2016-05-06T15:39:38.675Z">
+<meta property="og:updated_time" content="2016-05-06T15:50:24.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git版本控制入门（四）">
 <meta name="twitter:description" content="Git与远程仓库的连接">
@@ -338,68 +338,61 @@
       
 
       
-        <h1 id="1-注册账户以及创建仓库"><a href="#1-注册账户以及创建仓库" class="headerlink" title="1.注册账户以及创建仓库"></a>1.注册账户以及创建仓库</h1><p>注册github账号，记住账号名和邮箱（之后会用），创建仓库（免费用户只能建公共仓库），</p>
-<h1 id="2-安装客户端msysgit"><a href="#2-安装客户端msysgit" class="headerlink" title="2.安装客户端msysgit"></a>2.安装客户端msysgit</h1><p>github是服务端，要想在自己电脑上使用git还需要一个git客户端，这里选用msysgit，基于命令行的</p>
+        <h1 id="1-注册账户以及创建仓库"><a href="#1-注册账户以及创建仓库" class="headerlink" title="1.注册账户以及创建仓库"></a>1.注册账户以及创建仓库</h1><p>注册github账号，记住账号名和邮箱（之后会用），创建仓库（免费用户只能建公共仓库）</p>
+<h1 id="2-安装客户端msysgit"><a href="#2-安装客户端msysgit" class="headerlink" title="2.安装客户端msysgit"></a>2.安装客户端msysgit</h1><p>github是服务端，要想在自己电脑上使用git还需要一个git客户端，这里选用msysgit，基于命令行</p>
 <h1 id="3-配置Git"><a href="#3-配置Git" class="headerlink" title="3.配置Git"></a>3.配置Git</h1><p>为了把本地的仓库传到github，还需要配置ssh key</p>
-<ol>
-<li>首先在本地创建ssh key</li>
-</ol>
+<p>1.首先在本地创建ssh key</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;</span><br></pre></td></tr></table></figure>
 <p>此处的your_email@youremail.com即为注册github时的邮箱。</p>
-<ol>
-<li><p>添加ssh key到github</p>
+<p>2.添加ssh key到github</p>
 <ul>
-<li>打开本地C:\Documents and Settings\Administrator.ssh\id_rsa.pub文件</li>
-</ul>
+<li><p>打开本地C:\Documents and Settings\Administrator.ssh\id_rsa.pub文件</p>
 <p>此文件里的内容为刚才生成的密钥。默认为隐藏文件，需要手动显示。</p>
-<ul>
+</li>
 <li><p>登录github系统。点击右上角的Account Settings -&gt; SSH Public keys -&gt; add another public keys</p>
 </li>
 <li><p>把本地生成的密钥复制到里面（key文本框中），点击add key</p>
 </li>
 </ul>
-</li>
-<li><p>测试</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	$ ssh -T git@github.com</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">4. 设置username和email</span><br></pre></td></tr></table></figure>
-<pre><code>$ git config --gobal user.name &quot;your name&quot;
-$ git config --gobal user.email &quot;your_email@youremail.com&quot;
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 4.提交代码到远端（创建好的仓库）</span><br><span class="line"></span><br><span class="line">进入本地的工程文件夹，使用命令</span><br></pre></td></tr></table></figure>
-<pre><code>$ git init
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">初始化代码文件夹</span><br></pre></td></tr></table></figure>
-<pre><code>$ touch README.md
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">创建README.md文件</span><br></pre></td></tr></table></figure>
-<pre><code>$ git add .
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将所有文件加入要提交的缓存</span><br></pre></td></tr></table></figure>
-<pre><code>$ git add filename  
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">单独提交一个文件，前提是只修改了这一个文件</span><br></pre></td></tr></table></figure>
-<pre><code>$ git commit -m &quot;first commit&quot;
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将修改在本地提交（此时还未提交到远端），为本次提交命名</span><br><span class="line"></span><br><span class="line">可以查看本次提交</span><br></pre></td></tr></table></figure>
-<pre><code>first commit
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将本地版本库与远端的版本库连接起来</span><br></pre></td></tr></table></figure>
-<pre><code>$ git remote add origin git@github.com:amsfe/iMusic.git 
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将本地代码推送到远端</span><br></pre></td></tr></table></figure>
-<pre><code>$ git push -u origin master
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 5.更新代码</span><br><span class="line"></span><br><span class="line">修改了本地工程文件夹下的文件</span><br></pre></td></tr></table></figure>
-<pre><code>$ git add .
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将修改的文件增加进缓存</span><br></pre></td></tr></table></figure>
-<pre><code>$ git commit -m &quot;update:文件夹/文件&quot;
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将文件提交到远端</span><br></pre></td></tr></table></figure>
-<pre><code>$ git push
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 6.关于Git的几点说明</span><br><span class="line"></span><br><span class="line">git本地仓库由三部分共同管理实现；1.工作目录，持有实际文件 2.暂存区，临时保存了文件的改动 3.HEAD区，指向最后一次提交的结果</span><br></pre></td></tr></table></figure>
-<pre><code>$ git init
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">初始化git本地文件夹</span><br></pre></td></tr></table></figure>
-<pre><code>$ git add .
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">或</span><br></pre></td></tr></table></figure>
-<pre><code>$ git add filename
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">提出更改，将它们提交到缓存区</span><br></pre></td></tr></table></figure>
-<pre><code>$ git commit -m &quot;代码提交信息&quot;
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">实际提交代码命令，改动已经提交到HEAD，但还没有提交到远端版本库</span><br></pre></td></tr></table></figure>
-<pre><code>$ git remote add origin &lt;server&gt; 
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">连接到远端仓库（可以在工程文件夹下隐藏的.git文件夹里的config文件中手动更改要连接的远端仓库）</span><br></pre></td></tr></table></figure>
-<pre><code>$ git push origin master
-</code></pre><p>```</p>
+<p>3.测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>4.设置username和email</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --gobal user.name &quot;your name&quot;</span><br><span class="line">$ git config --gobal user.email &quot;your_email@youremail.com&quot;</span><br></pre></td></tr></table></figure>
+<h1 id="4-提交代码到远端（创建好的仓库）"><a href="#4-提交代码到远端（创建好的仓库）" class="headerlink" title="4.提交代码到远端（创建好的仓库）"></a>4.提交代码到远端（创建好的仓库）</h1><p>进入本地的工程文件夹，使用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>初始化代码文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch README.md</span><br></pre></td></tr></table></figure>
+<p>创建README.md文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
+<p>将所有文件加入要提交的缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add filename</span><br></pre></td></tr></table></figure>
+<p>单独提交一个文件，前提是只修改了这一个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;first commit&quot;</span><br></pre></td></tr></table></figure>
+<p>将修改在本地提交（此时还未提交到远端），为本次提交命名</p>
+<p>可以查看本次提交</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">first commit</span><br></pre></td></tr></table></figure>
+<p>将本地版本库与远端的版本库连接起来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:amsfe/iMusic.git</span><br></pre></td></tr></table></figure>
+<p>将本地代码推送到远端</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+<h1 id="5-更新代码"><a href="#5-更新代码" class="headerlink" title="5.更新代码"></a>5.更新代码</h1><p>修改了本地工程文件夹下的文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
+<p>将修改的文件增加进缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;update:文件夹/文件&quot;</span><br></pre></td></tr></table></figure>
+<p>将文件提交到远端</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<h1 id="6-关于Git的几点说明"><a href="#6-关于Git的几点说明" class="headerlink" title="6.关于Git的几点说明"></a>6.关于Git的几点说明</h1><p>git本地仓库由三部分共同管理实现；1.工作目录，持有实际文件 2.暂存区，临时保存了文件的改动 3.HEAD区，指向最后一次提交的结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>初始化git本地文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add filename</span><br></pre></td></tr></table></figure>
+<p>提出更改，将它们提交到缓存区</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;代码提交信息&quot;</span><br></pre></td></tr></table></figure>
+<p>实际提交代码命令，改动已经提交到HEAD，但还没有提交到远端版本库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin &lt;server&gt;</span><br></pre></td></tr></table></figure>
+<p>连接到远端仓库（可以在工程文件夹下隐藏的.git文件夹里的config文件中手动更改要连接的远端仓库）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
 <p>将改动提交到远端</p>
 <hr>
 <p>参考资料:</p>
@@ -604,7 +597,7 @@ $ git config --gobal user.email &quot;your_email@youremail.com&quot;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-注册账户以及创建仓库"><span class="nav-number">1.</span> <span class="nav-text">1.注册账户以及创建仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-安装客户端msysgit"><span class="nav-number">2.</span> <span class="nav-text">2.安装客户端msysgit</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-配置Git"><span class="nav-number">3.</span> <span class="nav-text">3.配置Git</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-注册账户以及创建仓库"><span class="nav-number">1.</span> <span class="nav-text">1.注册账户以及创建仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-安装客户端msysgit"><span class="nav-number">2.</span> <span class="nav-text">2.安装客户端msysgit</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-配置Git"><span class="nav-number">3.</span> <span class="nav-text">3.配置Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-提交代码到远端（创建好的仓库）"><span class="nav-number">4.</span> <span class="nav-text">4.提交代码到远端（创建好的仓库）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-更新代码"><span class="nav-number">5.</span> <span class="nav-text">5.更新代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-关于Git的几点说明"><span class="nav-number">6.</span> <span class="nav-text">6.关于Git的几点说明</span></a></li></ol></div>
             
           </div>
         </section>
