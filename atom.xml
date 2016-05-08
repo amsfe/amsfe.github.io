@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amsfe.com/"/>
-  <updated>2016-05-06T15:50:24.264Z</updated>
+  <updated>2016-05-08T01:23:33.063Z</updated>
   <id>http://amsfe.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android版本和API Level对应关系</title>
+    <link href="http://amsfe.com/2016/05/08/git_5/"/>
+    <id>http://amsfe.com/2016/05/08/git_5/</id>
+    <published>2016-05-08T01:02:16.000Z</published>
+    <updated>2016-05-08T01:23:33.063Z</updated>
+    
+    <content type="html">&lt;p&gt;从官网copy过来，留作笔记。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fpng%2FAndroid_api.png&quot; alt=&quot;Android_api.png&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考资料:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://source.android.com/source/build-numbers.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://source.android.com/source/build-numbers.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</content>
+    
+    <summary type="html">
+    
+      Android API Level 版本对应关系
+    
+    </summary>
+    
+      <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
+    
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Git版本控制入门（四）</title>
@@ -312,9 +344,9 @@
       <category term="MFC" scheme="http://amsfe.com/categories/MFC/"/>
     
     
-      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
-    
       <category term="MFC" scheme="http://amsfe.com/tags/MFC/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
     
   </entry>
   
@@ -362,9 +394,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -435,9 +467,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -572,9 +604,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -792,9 +824,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
@@ -822,9 +854,9 @@
       <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
-    
       <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
     
   </entry>
   
