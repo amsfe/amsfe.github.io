@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amsfe.com/"/>
-  <updated>2016-05-08T01:23:33.063Z</updated>
+  <updated>2016-05-22T16:05:53.220Z</updated>
   <id>http://amsfe.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android框架图</title>
+    <link href="http://amsfe.com/2016/05/23/AndroidFrame/"/>
+    <id>http://amsfe.com/2016/05/23/AndroidFrame/</id>
+    <published>2016-05-22T16:02:06.000Z</published>
+    <updated>2016-05-22T16:05:53.220Z</updated>
+    
+    <content type="html">&lt;p&gt;放在博客里，留作以后参考用。&lt;br&gt;&lt;img src=&quot;http://7xsnbz.com1.z0.glb.clouddn.com/image%2Fjpg%2FAndroidFrame.jpg&quot; alt=&quot;AndroidFrame.jpg&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      一张参考用的Android框架图
+    
+    </summary>
+    
+      <category term="Android" scheme="http://amsfe.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://amsfe.com/tags/Android/"/>
+    
+      <category term="Study Notes" scheme="http://amsfe.com/tags/Study-Notes/"/>
+    
+  </entry>
   
   <entry>
     <title>Android版本和API Level对应关系</title>
